@@ -12,15 +12,15 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-// const corsOptions = {
-//   origin: 'http://localhost:3001',
-//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-//   credentials: true,
-//   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-// };
+const corsOptions = {
+  origin: 'http://localhost:3000 || https://portfolio-anjay29.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+};
 
-// app.use(cors(corsOptions))
-app.use(cors())
+app.use(cors(corsOptions))
+// app.use(cors())
 app.use(express.json());
 app.use(cookieParser())
 

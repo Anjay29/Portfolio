@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 const corsOptions = {
-  origin: 'http://localhost:3000 || https://portfolio-anjay29.vercel.app',
+  origin: 'https://portfolio-anjay29.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true,
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']

@@ -16,8 +16,8 @@ function App() {
     const fetchData = async () => {
       dispatch(loadingStarts());
       try {
-        const res = await axios.get('http://localhost:8000/api/v1/get-portfolio-data')
-        console.log(res.data);
+        const res = await axios.get('https://portfolio-server-git-main-anjay29s-projects.vercel.app/api/v1/get-portfolio-data')
+        // console.log(res.data);
         dispatch(setPortfolioData(res.data))
         dispatch(loadingSucess());
       } catch (error) {

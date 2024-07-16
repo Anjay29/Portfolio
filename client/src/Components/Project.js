@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SectionTitle from './SectionTitle.js'
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Project = () => {
     const [selectedItem, setSelectedItem] = useState(0)
@@ -22,6 +23,10 @@ const Project = () => {
                   <h1 className='text-secondry text-xl'>{portfolioData?.projects[selectedItem].title}</h1>
                   <h1 className='text-tertiary text-xl'>{portfolioData?.projects[selectedItem].techStack}</h1>
                   <h1 className='text-gray-200 '>{portfolioData?.projects[selectedItem].description}</h1>
+                  <h1 className='pt-8 text-xl text-secondry'>
+                    Project Demo Link -
+                    <Link to={portfolioData?.projects[selectedItem].link} className='text-tertiary text-xl pl-4'>Click here</Link>
+                  </h1>
               </div>
         </div>
     </div>
